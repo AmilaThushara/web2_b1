@@ -49,6 +49,10 @@ public final class Day1_005f1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>JSP Page</title>\n");
+      out.write("\n");
+      out.write("        <link rel=\"stylesheet\" herf=<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">>\n");
+      out.write("        <!--        <link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">-->\n");
+      out.write("\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <h1>Hello World!</h1>\n");
@@ -64,10 +68,9 @@ public final class Day1_005f1_jsp extends org.apache.jasper.runtime.HttpJspBase
                 {"Amila", "Thushara", "Wickramarathna", button_},
                 {"Supun", "Thekshana", "Silva", button_},
                 {"Achintha", "Isuru", "Perera", button_},
-                {"Pasindu", "Pramod", "Upathissa", button_},
-            };
+                {"Pasindu", "Pramod", "Upathissa", button_},};
 
-            out.write("<table border=1>");
+            out.write("<table class='table'>");
             out.write("<tr>");
             for (String header : headers) {
                 out.write("<th>" + header + "</th>");
@@ -79,19 +82,19 @@ public final class Day1_005f1_jsp extends org.apache.jasper.runtime.HttpJspBase
                 int no = 0;
                 out.write("<tr>");
                 out.write("<form action='View.jsp'>");
-                for (int index =0; index <rows.length;index++) {
-                    String val= rows[index];
-                    if (!val.contains("input")){
-                          out.write("<td><input name='t"+(++no)+"' type='hidden' value='"+val+"'>"+val+"</td>");
-                    }else{
-                        out.write("<td>"+val+"</td>");
+                for (int index = 0; index < rows.length; index++) {
+                    String val = rows[index];
+                    if (!val.contains("input")) {
+                        out.write("<td><input name='t" + (++no) + "' type='hidden' value='" + val + "'>" + val + "</td>");
+                    } else {
+                        out.write("<td>" + val + "</td>");
                     }
                 }
-                 out.write("</form>");
+                out.write("</form>");
                 out.write("</tr>");
             }
             out.write("</table>");
- 
+
         
       out.write("\n");
       out.write("    </body>\n");

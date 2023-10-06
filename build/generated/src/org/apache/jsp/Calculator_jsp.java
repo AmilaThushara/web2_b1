@@ -53,7 +53,7 @@ public final class Calculator_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <body>\n");
       out.write("        <h1>My Calculator!</h1>\n");
       out.write("        \n");
-      out.write("        <form>\n");
+      out.write("        <form action=\"Answer.jsp\">\n");
       out.write("            <table>\n");
       out.write("                <tr>\n");
       out.write("                    <th>First No</th>\n");
@@ -70,7 +70,7 @@ public final class Calculator_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <tr>\n");
       out.write("                    <th>Operator</th>\n");
       out.write("                    <th>:</th>\n");
-      out.write("                    <td><input type=\"text\" name=\"fno\"></td>\n");
+      out.write("                    <td><input type=\"text\" name=\"op\"></td>\n");
       out.write("                </tr>\n");
       out.write("                \n");
       out.write("                <tr>\n");
